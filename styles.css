@@ -80,7 +80,7 @@ nav{
 
 /* ---------- HERO ---------- */
 .hero{
-  padding:96px 0 88px;
+  padding-block:96px 88px;
   display:grid;
   grid-template-columns:1.15fr 0.55fr;
   gap:64px;
@@ -152,7 +152,7 @@ nav{
 
 /* ---------- PHILOSOPHY ---------- */
 .philosophy{
-  padding:64px 0 76px;
+  padding-block:64px 76px;
   border-top:1px solid var(--line);
 }
 .philosophy p{
@@ -255,7 +255,7 @@ nav{
 @media(max-width:560px){ .process-list{ grid-template-columns:1fr; } }
 
 /* ---------- TESTIMONIAL ---------- */
-.testimonial{ padding:90px 0; text-align:left; }
+.testimonial{ padding-block:90px; text-align:left; }
 .testimonial blockquote{
   font-family:'Fraunces', serif;
   font-size:clamp(1.4rem,2.8vw,2.1rem);
@@ -291,4 +291,11 @@ footer h2{ font-size:clamp(2rem,4vw,3rem); max-width:11ch; color:#FBF0EA; }
   display:flex; justify-content:space-between; align-items:center;
   border-top:1px solid rgba(251,240,234,0.25);
   padding-top:26px; font-size:0.85rem; color:#E7C3B9; flex-wrap:wrap; gap:12px;
+}
+
+/* Tighter vertical spacing on phones */
+@media(max-width:640px){
+  .hero{ padding-block:56px 56px; }
+  .philosophy{ padding-block:48px 56px; }
+  .testimonial{ padding-block:64px; }
 }
